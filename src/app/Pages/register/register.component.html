@@ -1,0 +1,110 @@
+
+<div class="container" id= "jd">
+  <div id ="card">
+    <div class="row">
+      <div class="col">
+        <div class = "logo" id="frm">
+          <img src="../.././../assets/Tasmas.png">
+        </div>
+        <div id="frm">
+          <span id="title">
+            Tasmas
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <div id="frm">
+          <form [formGroup]="myForm" (ngSubmit)="onSubmit(myForm)">
+            <div>
+              <label class="form-label">
+                Email:
+              </label><br>
+              <input type = "text" formControlName="email" placeholder="Your email">
+              <div *ngIf="myForm.get('email').invalid && (myForm.get('email').dirty || myForm.get('email').touched)"
+              class="alert alert-danger">
+              <div *ngIf="myForm.get('email').errors.required">
+                email is required.
+              </div>
+              <div *ngIf="myForm.get('email').errors.maxlength">
+                email cannot be more than 8 characters long.
+              </div>
+              <div *ngIf="myForm.get('email').errors.minlength">
+                email must be at least 3 characters long.
+              </div>
+              </div>
+            </div>
+            <div id = "pas">
+              <label class="form-label">
+                Password:
+              </label><br>
+              <input  type = "password" formControlName="password" placeholder="Your password">
+              <div *ngIf="myForm.get('password').invalid && (myForm.get('password').dirty || myForm.get('password').touched)"
+              class="alert alert-danger">
+              <div *ngIf="myForm.get('password').errors.required">
+                password is required.
+              </div>
+              <div *ngIf="myForm.get('password').errors.maxlength">
+                password cannot be more than 10 characters long.
+              </div>
+              <div *ngIf="myForm.get('password').errors.minlength">
+                password must be at least 6 characters long.
+              </div>
+              <div *ngIf="myForm.get('password').errors.pattern">
+                password must be alphanumeric with one special character.
+            </div>
+              </div>
+            </div>
+            <div id = "pas">
+              <label class="form-label">
+               Confirm Password:
+              </label><br>
+              <input  type = "password" formControlName="confirmpassword" placeholder="Your password">
+              <div *ngIf="myForm.get('confirmpassword').invalid && (myForm.get('confirmpassword').dirty || myForm.get('confirmpassword').touched)"
+              class="alert alert-danger">
+              <div *ngIf="myForm.get('confirmpassword').errors.required">
+                password is required.
+              </div>
+              <div *ngIf="myForm.get('confirmpassword').errors.maxlength">
+                password cannot be more than 10 characters long.
+              </div>
+              <div *ngIf="myForm.get('confirmpassword').errors.minlength">
+                password must be at least 6 characters long.
+              </div>
+              <div *ngIf="myForm.get('confirmpassword').errors.pattern">
+                password must be alphanumeric with one special character.
+            </div>
+              </div>
+            </div>
+            <!-- <div id = "pas">
+              <label class="form-label">
+               Mobile:
+              </label><br>
+              <input  type = "number" formControlName="mobile" placeholder="Your mobile no">
+              <div *ngIf="myForm.get('mobile').invalid && (myForm.get('mobile').dirty || myForm.get('mobile').touched)"
+              class="alert alert-danger">
+              <div *ngIf="myForm.get('mobile').errors.required">
+                mobile no is required.
+              </div>
+              <div *ngIf="myForm.get('mobile').errors.maxlength">
+                mobile no cannot be more than 10 characters long.
+              </div>
+              <div *ngIf="myForm.get('mobile').errors.minlength">
+                mobile no must be at least 10 characters long.
+              </div>
+              <div *ngIf="myForm.get('mobile').errors.pattern">
+                mobile no must be 10 character long.
+            </div>
+              </div>
+            </div> -->
+
+            <button id ="btn" type="submit" [disabled]="!myForm.valid">Signup</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+

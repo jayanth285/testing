@@ -1,0 +1,59 @@
+<app-nav>
+</app-nav>
+
+<div class="container" id= "jd">
+  <div id ="card">
+    <div class="row">
+      <div class="col">
+        <!-- <div class = "logo" id="frm">
+          <img src="../.././../assets/Tasmas.png">
+        </div> -->
+        <span id="title">
+          Pending
+        </span>
+        <div id="frm">
+
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <div id="frm">
+          <form [formGroup]="myForm" (ngSubmit)="onSubmit(myForm)">
+            <div>
+              <label class="form-label">
+                Status:
+              </label><br>
+              <select class="form-control" id="status"  formControlName="status" required>
+                <option value='A'>Active</option>
+                <option value='NA'>De-Active</option>
+              </select>
+              </div>
+            <button id ="btn" type="submit" [disabled]="!myForm.valid">Signin</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <table class="table table-striped">
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Name</th>
+            <th scope="col">Paid_at</th>
+            <th scope="col">Due_days</th>
+          </tr>
+          <tr *ngFor = "let ele of this.pending | filter:term">
+            <td>{{ele.member_id}}</td>
+            <td>{{ele.name}}</td>
+            <td>{{ele.paid_date}}</td>
+            <td>{{ele.due_days}}</td>
+            <td><button class ="edit_btn"><span class="material-symbols-outlined">
+              edit
+              </span></button></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

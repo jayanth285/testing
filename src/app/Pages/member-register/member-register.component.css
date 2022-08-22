@@ -1,0 +1,84 @@
+#pas {
+  margin-top: 1rem;
+}
+
+
+#box{
+  /* height:100vh;
+  width:100vw; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+
+#frm{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "PALANQUIN" !important;
+
+}
+
+#title{
+  font-family: "PALANQUIN" !important;
+  font-weight: bold;
+  font-size: 2rem;
+  color:#e25822;
+}
+
+
+#btn{
+  margin-top:1rem;
+  border-radius: 2rem;
+  color:#ffff;
+  background-color:#14213D;
+  width:5rem;
+}
+
+.form-label{
+  color:#14213D;
+  font-weight: bold;
+}
+
+input {
+  border: none;
+  border-bottom: .2rem solid #FCA311;
+  font-family: "PALANQUIN" !important;
+  background-color: transparent;
+}
+
+
+input:focus
+{
+   outline: none;
+}
+
+#jd{
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo img {
+  max-width:100px;
+  max-height:100px;
+  min-width:100px;
+  min-height:100px;
+}
+.row {
+  margin-top:2rem;
+}
+
+#card{
+  padding-top:2rem;
+  padding-bottom:2rem;
+  padding-left: 4rem;
+  padding-right: 4rem;
+
+  /* background: linear-gradient(145deg, #CCCED1, #FFFFFF); */
+
+  box-shadow: 11.11px 11.11px 24px #CFD1D4, -11.11px -11.11px 24px #FFFFFF;
+}

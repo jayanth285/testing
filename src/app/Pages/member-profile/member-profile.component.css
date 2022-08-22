@@ -1,0 +1,116 @@
+#pas {
+  margin-top: 1rem;
+}
+
+
+#box{
+  height:100vh;
+  width:100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+
+#frm{
+  display: flex;
+  color:#e25822 !important;
+  justify-content: center;
+  align-items: center;
+  font-family: "PALANQUIN" !important;
+  padding-bottom: 1rem;
+}
+
+#title{
+  font-family: "PALANQUIN" !important;
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+
+#btn{
+  margin-top:1rem;
+  border-radius: 2rem;
+  color:#ffff;
+  background-color:#14213D;
+  width:5rem;
+}
+
+.form-label{
+  color:#14213D;
+  font-weight: bold;
+}
+
+input {
+  border: none;
+  border-bottom: .2rem solid #FCA311;
+  font-family: "PALANQUIN" !important;
+  background-color: transparent;
+}
+
+
+input:focus
+{
+   outline: none;
+}
+
+#jd{
+  height:100vh;
+  width:80vw;
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+}
+
+
+
+.row {
+  margin-top:2rem;
+}
+
+#card{
+
+  padding-bottom:2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  box-shadow: 11.11px 11.11px 24px #CFD1D4, -11.11px -11.11px 24px #FFFFFF;
+  width: 80vw;
+}
+
+
+
+.logo img {
+  max-width:100px;
+  max-height:100px;
+  min-width:100px;
+  min-height:100px;
+}
+
+
+table th {
+  text-align: center;
+  color:#14213D
+  }
+
+  table td {
+    text-align: center;
+    color:#14213D
+    }
+
+
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+
+
+.edit_btn{
+  padding: 0;
+  border: none;
+  background: none;
+}

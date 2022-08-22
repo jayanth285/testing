@@ -1,0 +1,92 @@
+
+<app-nav>
+</app-nav>
+
+<div class="container" id= "jd">
+  <div id ="card">
+    <div class="row">
+      <div class="col">
+        <!-- <div class = "logo" id="frm">
+          <img src="../.././../assets/Tasmas.png">
+        </div> -->
+        <div id="frm">
+          <span id="title">
+            Payment
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <div id="frm">
+          <form [formGroup]="myForm" (ngSubmit)="onSubmit(myForm)">
+            <div id="pas">
+              <label class="form-label">
+                user_id:
+              </label><br>
+              <input type = "number" formControlName="user_id" placeholder="Your user_id" [(ngModel)] = "this.user_id" required readonly>
+              <div *ngIf="myForm.get('user_id').invalid && (myForm.get('user_id').dirty || myForm.get('user_id').touched)"
+              class="alert alert-danger">
+              <div *ngIf="myForm.get('user_id').errors.required">
+                user_id is required.
+              </div>
+              <div *ngIf="myForm.get('user_id').errors.minlength">
+                user_id must be at least 3 characters long.
+              </div>
+              </div>
+            </div>
+
+            <div id="pas">
+              <label class="form-label">
+                member_id:
+              </label><br>
+              <input type = "number" formControlName="member_id" placeholder="Your member_id">
+              <div *ngIf="myForm.get('member_id').invalid && (myForm.get('member_id').dirty || myForm.get('member_id').touched)"
+              class="alert alert-danger">
+              <div *ngIf="myForm.get('member_id').errors.required">
+                member_id is required.
+              </div>
+              <div *ngIf="myForm.get('member_id').errors.min">
+                member_id must be grater than 0.
+              </div>
+              </div>
+            </div>
+
+
+
+
+
+            <div id="pas">
+              <label class="form-label">
+                Pay_Date:
+              </label><br>
+              <input type = "date" formControlName="pay_date" placeholder="Your pay_date">
+              <div *ngIf="myForm.get('pay_date').invalid && (myForm.get('pay_date').dirty || myForm.get('pay_date').touched)"
+              class="alert alert-danger">
+              <div *ngIf="myForm.get('pay_date').errors.required">
+                pay_date is required.
+              </div>
+              </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+            <button id ="btn" type="submit" [disabled]="!myForm.valid">Signup</button>
+          </form>
+        </div>
+        <!-- <button (click)="test()">click</button> -->
+      </div>
+    </div>
+
+  </div>
+</div>
+

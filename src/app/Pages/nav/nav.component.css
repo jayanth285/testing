@@ -1,0 +1,61 @@
+a{
+  text-transform: uppercase;
+  font-family: sans-serif;
+  position:relative;
+  list-style: none;
+  text-decoration: none;
+  font-weight: bold;
+  list-style: none;
+  position:relative;
+  display:block;
+  text-decoration: none;
+  justify-content:center ;
+  align-items: center;
+  color:#00008b !important;
+  font-size: 1rem;
+  margin-top:.5rem;
+  }
+
+
+  a:hover{
+    color:#e25822 !important;
+  }
+
+
+
+
+
+
+  #navbarNav{
+    display:flex;
+    align-items: right !important;
+  }
+
+
+  @keyframes logocolor{
+    0%,25% {fill:#00008b}
+    26%,50% {fill:#e25822}
+    100% {fill:#00008b}
+  }
+
+
+
+
+  .jd{
+    font-family: "PALANQUIN";
+    height:4rem;
+    position: relative;
+    width: 100%;
+  }
+
+
+
+.tasmas{
+  height:3rem;
+}
+
+.tasmas img{
+  height:100%;
+}
+
+

@@ -1,0 +1,73 @@
+<div class="container" id= "jd">
+  <div id ="card">
+    <div class="row">
+      <div class="col">
+        <div class = "logo" id="frm">
+          <img src="../.././../assets/Tasmas.png">
+        </div>
+        <div id="frm">
+          <span id="title">
+            Tasmas
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <div id="frm">
+          <form [formGroup]="myForm" (ngSubmit)="onSubmit(myForm)">
+            <div>
+              <label class="form-label">
+                Email:
+              </label><br>
+              <input type = "email" formControlName="email" placeholder="Your email">
+              <div *ngIf="myForm.get('email').invalid && (myForm.get('email').dirty || myForm.get('email').touched)"
+              class="alert alert-danger">
+              <div *ngIf="myForm.get('email').errors.required">
+                email is required.
+              </div>
+              <div *ngIf="myForm.get('email').errors.pattern">
+                enter valid email
+            </div>
+              </div>
+            </div>
+            <div id = "pas">
+              <label class="form-label">
+                Password:
+              </label><br>
+              <input  [type]="show ? 'text' : 'password'" formControlName="password" placeholder="Your password">
+              <button id ='eye' (click)="passwordbtn()"><mat-icon>visibility</mat-icon></button>
+              <div *ngIf="myForm.get('password').invalid && (myForm.get('password').dirty || myForm.get('password').touched)"
+              class="alert alert-danger">
+
+              <div *ngIf="myForm.get('password').errors.required">
+                password is required.
+              </div>
+              <div *ngIf="myForm.get('password').errors.maxlength">
+                password cannot be more than 10 characters long.
+              </div>
+              <div *ngIf="myForm.get('password').errors.minlength">
+                password must be at least 6 characters long.
+              </div>
+              <div *ngIf="myForm.get('password').errors.pattern">
+                password must be alphanumeric with one special character.
+            </div>
+              </div>
+            </div>
+
+            <div id ="fg_pswd">
+              <a href="#">Forgot password</a>
+
+            </div>
+            <div id ="sign_btn">
+              <button id ="btn" type="submit" [disabled]="!myForm.valid">Signin</button>
+            </div>
+
+          </form>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

@@ -1,0 +1,170 @@
+
+<app-nav>
+</app-nav>
+
+<div class="container" id= "jd">
+  <div id ="card">
+    <div class="row">
+      <div class="col">
+        <!-- <div class = "logo" id="frm">
+          <img src="../.././../assets/Tasmas.png">
+        </div> -->
+        <div id="frm">
+          <span id="title">
+            Regsiter Member
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <div id="frm">
+          <form [formGroup]="myForm" (ngSubmit)="onSubmit(myForm)">
+            <div id="pas">
+              <label class="form-label">
+                user_id:
+              </label><br>
+              <input type = "number" formControlName="user_id" placeholder="Your user_id" [(ngModel)]="this.user_id" required readonly>
+              <!-- <div *ngIf="myForm.get('user_id').invalid && (myForm.get('user_id').dirty || myForm.get('user_id').touched)"
+              class="alert alert-danger">
+              <div *ngIf="myForm.get('user_id').errors.required">
+                user_id is required.
+              </div>
+              <div *ngIf="myForm.get('user_id').errors.minlength">
+                user_id must be at least 3 characters long.
+              </div> -->
+              <!-- </div> -->
+            </div>
+
+           <div id="pas">
+              <label class="form-label">
+                Program:
+              </label><br>
+              <select class="form-control" id="program_id"  formControlName="program_id" required>
+                <option value=1>Daily</option>
+                <option value=2>Weekly</option>
+                <option value=3>Fortnight</option>
+                <option value=4>Monthly</option>
+                <option value=5>Half_Yearly</option>
+                <option value=6>Yearly</option>
+                <option value=7>Quarterly</option>
+              </select>
+              <div *ngIf="myForm.get('program_id').invalid && (myForm.get('program_id').dirty || myForm.get('program_id').touched)"
+              class="alert alert-danger">
+              <div *ngIf="myForm.get('program_id').errors.required">
+                program is required.
+              </div>
+              </div>
+            </div>
+
+
+             <div id="pas">
+              <label class="form-label">
+                Name:
+              </label><br>
+              <input type = "text" formControlName="name" placeholder="Your name">
+              <div *ngIf="myForm.get('name').invalid && (myForm.get('name').dirty || myForm.get('name').touched)"
+              class="alert alert-danger">
+              <div *ngIf="myForm.get('name').errors.required">
+                name is required.
+              </div>
+              <div *ngIf="myForm.get('name').errors.minlength">
+                name must be at least 3 characters long.
+              </div>
+              </div>
+            </div>
+
+
+            <div id="pas">
+              <label class="form-label">
+                Location:
+              </label><br>
+              <input type = "text" formControlName="location" placeholder="Your location">
+              <div *ngIf="myForm.get('location').invalid && (myForm.get('location').dirty || myForm.get('location').touched)"
+              class="alert alert-danger">
+              <div *ngIf="myForm.get('location').errors.required">
+                location is required.
+              </div>
+              <div *ngIf="myForm.get('location').errors.minlength">
+                location must be at least 3 characters long.
+              </div>
+              </div>
+            </div>
+
+
+
+
+            <div id="pas">
+              <label class="form-label">
+                Status:
+              </label><br>
+              <select class="form-control" id="status"  formControlName="status" required>
+                <option value="A">Active</option>
+                <option value="NA">Deactive</option>
+              </select>
+              <div *ngIf="myForm.get('status').invalid && (myForm.get('status').dirty || myForm.get('status').touched)"
+              class="alert alert-danger">
+              <div *ngIf="myForm.get('status').errors.required">
+                status is required.
+              </div>
+              </div>
+            </div>
+
+            <div id = "pas">
+              <label class="form-label">
+               Mobile:
+              </label><br>
+              <input  type = "number" formControlName="mobile" placeholder="Your mobile no">
+              <div *ngIf="myForm.get('mobile').invalid && (myForm.get('mobile').dirty || myForm.get('mobile').touched)"
+              class="alert alert-danger">
+              <div *ngIf="myForm.get('mobile').errors.required">
+                mobile no is required.
+              </div>
+              <div *ngIf="myForm.get('mobile').errors.maxlength">
+                mobile no cannot be more than 10 characters long.
+              </div>
+              <div *ngIf="myForm.get('mobile').errors.minlength">
+                mobile no must be at least 10 characters long.
+              </div>
+              <div *ngIf="myForm.get('mobile').errors.pattern">
+                mobile no must be 10 character long.
+            </div>
+              </div>
+            </div>
+
+
+            <div id="pas">
+              <label class="form-label">
+                Registeration_Date:
+              </label><br>
+              <input type = "date" formControlName="reg_date" placeholder="Your reg_date">
+              <div *ngIf="myForm.get('reg_date').invalid && (myForm.get('reg_date').dirty || myForm.get('reg_date').touched)"
+              class="alert alert-danger">
+              <div *ngIf="myForm.get('reg_date').errors.required">
+                reg_date is required.
+              </div>
+              </div>
+            </div>
+
+
+            <div id="pas">
+              <label class="form-label">
+                Cycle_Date:
+              </label><br>
+              <input type = "date" formControlName="cycle_date" placeholder="Your cycle_date">
+              <div *ngIf="myForm.get('cycle_date').invalid && (myForm.get('cycle_date').dirty || myForm.get('cycle_date').touched)"
+              class="alert alert-danger">
+              <div *ngIf="myForm.get('cycle_date').errors.required">
+                cycle_date is required.
+              </div>
+              </div>
+            </div>
+            <button id ="btn" type="submit" [disabled]="myForm.invalid">Signup</button>
+          </form>
+        </div>
+        <!-- <button (click)="test()">click</button> -->
+      </div>
+    </div>
+  </div>
+</div>
+
